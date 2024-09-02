@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class Dado {
+public class Dado implements IDado{
     private int lados;
     private int valorJogada;
     private final Random random;
@@ -16,5 +16,8 @@ public class Dado {
 
     public int getValor() {
         return valorJogada;
+    }
+    public int getLados() {
+        return lados;
     }
 }
