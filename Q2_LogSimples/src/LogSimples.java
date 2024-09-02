@@ -4,19 +4,27 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class LogSimples implements Iterable<String>{
+    public static LogSimples instancia;
     private List<String> mensagens;
 
-    public LogSimples(){
+    private LogSimples(){
         mensagens = new LinkedList<>();
     }
 
     public void log(String m){
+        if (instancia == null) instancia();
         String logM = LocalDate.now().toString() + " : " + m;
-        mensagens.add(logM);
+        instancia.mensagens.add(logM);
     }
 
     @Override
     public Iterator<String> iterator() {
-        return mensagens.iterator();
+        if (instancia == null) instancia();
+        return instancia.mensagens.iterator();
+    }
+
+    public static LogSimples instancia(){
+        if (instancia == null) instancia = new LogSimples();
+        return instancia;
     }
 }
