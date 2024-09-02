@@ -6,5 +6,12 @@ public class App {
         d20.rolar();
         System.out.println("D6: " + d6.getValor());
         System.out.println("D20: " + d20.getValor());
+        DadoSerie d20Serie = new DadoSerie(d20);
+        d20Serie.rolar();
+        System.out.println("D20: " + d20Serie.getValor());
+        System.out.println("D20 serie: " + d20Serie.getSerie());
+        d20Serie.rolar();
+        System.out.println("D20: " + d20Serie.getValor());
+        System.out.println("D20 serie: " + d20Serie.getSerie());
     }
 }
