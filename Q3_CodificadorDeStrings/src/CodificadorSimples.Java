@@ -1,3 +1,6 @@
+import java.util.HashMap;
+import java.util.Map;
+
 public class CodificadorSimples implements ICodificador {
     private Map<Character,Character> tabCod;
     private Map<Character,Character> tabDeCod;
@@ -15,7 +18,6 @@ public class CodificadorSimples implements ICodificador {
         tabDeCod.put('!','i');
         tabDeCod.put('$','o');
         tabDeCod.put('%','u');
-        
     }
 
     public String codifica(String str) {

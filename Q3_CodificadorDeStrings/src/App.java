@@ -1,7 +1,7 @@
 public class App {
     public static void main(String[] args) throws Exception {
         CodificadorDesloca codDes = new CodificadorDesloca();
-        CodificadorSimpls codSimp = new CodificadorSimples();
+        CodificadorSimples codSimp = new CodificadorSimples();
         Codificador cod = new Codificador(codSimp);
 
         String aux = "Desafio Padrões de Projeto";
